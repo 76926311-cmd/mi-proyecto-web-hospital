@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualizar cita - Hospital EsSalud Norte Chico</title>
+  <link rel="stylesheet" href="css/actualizar.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Hospital ESSALUD Norte Chico</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="registro.html">Registrar cita</a></li>
+                <li><a href="consulta.html">Mis registros</a></li>
+                <li><a href="login.html" id="btn-salir">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <div class="cita-container">
+    <h2>Actualizar cita</h2>
+    <p id="aviso" hidden></p>
+    <form id="formActualizar">
+      <div class="form-group">
+        <label for="numeroAsegurado">Número de asegurado</label>
+        <input type="text" id="numeroAsegurado" required maxlength="4" inputmode="numeric" pattern="[0-9]{4}" title="4 dígitos">
+      </div>
+      <div class="form-group">
+        <label for="nombrePaciente">Nombre del paciente</label>
+        <input type="text" id="nombrePaciente" required>
+      </div>
+      <div class="form-group">
+        <label for="sedeHospital">Sede</label>
+        <select id="sedeHospital" required>
+          <option value="">-- Selecciona una sede --</option>
+          <option value="Hospital Huacho">Hospital Huacho</option>
+          <option value="Hospital Barranca">Hospital Barranca</option>
+          <option value="Hospital Huaral">Hospital Huaral</option>
+           <option value="Hospital de Alta Complejidad 'Virgen de la Puerta'">Hospital de Alta Complejidad 'Virgen de la Puerta'</option>
+          <option value="Hospital Regional Docente de Trujillo">Hospital Regional Docente de Trujillo</option>
+          <option value="Hospital Nacional Arzobispo Loayza">Hospital Nacional Arzobispo Loayza</option>
+          <option value="Hospital Nacional Guillermo Almenara Irigoyen">Hospital Nacional Guillermo Almenara Irigoyen</option>
+          <option value="Hospital Nacional Edgardo Rebagliati Martins">Hospital Nacional Edgardo Rebagliati Martins</option>
+
+      
+        <select id="estado" required>
+          <option value="">-- Selecciona un estado --</option>
+          <option value="registrado">registrado</option>
+          <option value="atendido">atendido</option>
+          <option value="rechazado">rechazado</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-agendar" id="btn-guardar">Guardar cambios</button>
+    </form>
+    <div id="mensajeConfirmacion"></div>
+    <p><a href="consulta.html">Volver a mis registros</a></p>
+  </div>
+
+  <script type="module" src="js/actualizar/actualizar.js"></script>
+</body>
+</html>
